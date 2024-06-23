@@ -3,6 +3,8 @@
 
 <div style="display: block; margin: 0 auto;">
 <a class="github-button" href="https://github.com/1D10T1C-STUD10S/frontsearchjs" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star 1D10T1C-STUD10S/frontsearchjs on GitHub">Star</a>
+
+<a class="github-button" href="https://github.com/1D10T1C-STUD10S/frontsearchjs/subscription" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-icon="octicon-eye" data-size="large" data-show-count="true" aria-label="Watch 1D10T1C-STUD10S/frontsearchjs on GitHub">Watch</a>
 </div>
 
 Built for Frontend sites and requires nothing but a simple JSON file.
