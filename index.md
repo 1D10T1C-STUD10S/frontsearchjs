@@ -22,6 +22,10 @@ You will only need this on the pages that you want the search filter to be in, b
 
 This script will be the main script component but you will still need to define variables, but that's for later.
 
+---
+
+## Building the Search Function
+
 ### HTML and CSS
 
 We will not run through the CSS but the HTML is a must. Since we use specific classes abd id(s) to get the elements, do **keep those intact**!
@@ -74,3 +78,13 @@ const entryHTML = `
                     `;
 //insert your entry html structure inside, the code will generate per entry
 ```
+
+Let's move on to the JSON file(s) now shall we?
+
+---
+
+## Data Storage
+
+### JSON Structure
+
+We use our own values for the search, but if you want your own, it's not that hard to edit the source code for your own use!
