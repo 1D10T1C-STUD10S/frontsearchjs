@@ -1,15 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // List of known JSON file URLs
-    //const jsonUrls = [
-    //    'https://example.com/data/file1.json',
-    //    'https://example.com/data/file2.json',
-    //    'https://example.com/data/file3.json',
-    //    'https://example.com/data/file4.json',
-    //    'https://example.com/data/file5.json'
-        // Add more URLs as needed
-    //];
-
-  //uncomment this and copy it over
 
     async function fetchAndCombineJSON(urls) {
         const fetchPromises = urls.map(url => fetch(url).then(response => response.json()));
@@ -59,25 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 entriesContainer.appendChild(noResultsMessage);
             } else {
                 filtered.forEach(entry => {
-                    const entryHTML = `
-                        <div class="entry-wrapper">
-                            <h2>${entry.name}</h2>
-                            <small><p style="text-align: center;">${entry.category}</p></small>
-                            <p>${entry.description}</p>
-                            <div style="text-align: center;">
-                                <p style="color: #ffffff;">${entry.detail1}</p>
-                                <p style="color: #ffffff;">${entry.detail2}</p>
-                            </div>
-                            <a href="#${entry.name.replace(/\s+/g,'-')}" rel="modal:open">
-                                <img src="${entry.image}" alt="${entry.name}">
-                            </a>
-                        </div>
-                        <div id="${entry.name.replace(/\s+/g,'-')}" class="modal">
-                            <p>Image:</p>
-                            <img src="${entry.image}" alt="${entry.name}">
-                            <a href="#" rel="modal:close">Close</a>
-                        </div>
-                    `;
                     const entryElement = document.createElement('div');
                     entryElement.innerHTML = entryHTML;
                     entriesContainer.appendChild(entryElement);
