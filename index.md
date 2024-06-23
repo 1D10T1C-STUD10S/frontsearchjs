@@ -1,7 +1,7 @@
 
 ### FrontSearch.js, the library/template for easy filter search systems!
 
-<a class="github-button" href="https://github.com/1D10T1C-STUD10S/frontsearchjs" data-color-scheme="no-preference: dark_high_contrast; light: dark_high_contrast; dark: dark_high_contrast;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star 1D10T1C-STUD10S/frontsearchjs on GitHub">Star</a>
+<a class="github-button" href="https://github.com/1D10T1C-STUD10S/frontsearchjs" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star 1D10T1C-STUD10S/frontsearchjs on GitHub">Star</a>
 
 Built for Frontend sites and requires nothing but a simple JSON file.
 Use the template or install it on your static site, our library will handle most of the code for you.
