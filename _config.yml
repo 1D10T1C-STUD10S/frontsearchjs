@@ -2,3 +2,6 @@ title: FrontSearch.js
 description: FrontSearch.js by 1DST
 remote_theme: riggraz/no-style-please
 favicon: "logo.png"
+
+theme_config:
+  appearance: "dark"
