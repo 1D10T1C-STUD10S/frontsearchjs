@@ -12,7 +12,7 @@ Time to start! Follow us step by step and you'll be just fine, we recommend usin
 
 ### Installation
 
-First, put this `<script>` tag at the end of your `<body` in HTML.
+First, put this `<script>` tag at the **end** of your `<body` in HTML.
 
 You will only need this on the pages that you want the search filter to be in, but if you put it in all pages, that's fine too. (Though it may increase loading speeds!)
 
@@ -24,7 +24,7 @@ This script will be the main script component but you will still need to define 
 
 ### HTML and CSS
 
-We will not run through the CSS but the HTML is a must. Since we use specific classes abd ids to get the elements, do keeps those intact!
+We will not run through the CSS but the HTML is a must. Since we use specific classes abd id(s) to get the elements, do **keep those intact**!
 
 Now, we need to add the basic HTML content:
 
@@ -37,3 +37,40 @@ Now, we need to add the basic HTML content:
 ```
 
 Do note the JS will create messages below this HTML.
+
+### Adding Variables
+
+
+This step defines how your search will look, and also where the code will get the JSON files from.
+
+First, create a new `<script>` tag in your HTML, **above** the first one we added:
+
+```
+<script>
+const jsonUrls = [
+  'https://example.com/data/file1.json',
+  'https://example.com/data/file2.json',
+  'https://example.com/data/file3.json',
+  'https://example.com/data/file4.json',
+  'https://example.com/data/file5.json',
+  // Add more URLs as needed
+];
+</script>
+```
+
+Now you're almost there! We will do the JSON in a bit!
+
+Remember the `<div class="entries-container></div>` we added earlier?
+
+Now the code will place entries inside that `<div>` using a template, we need to define that template, in the same `<script>` tag as the one we used to define the `jsonUrls`, add:
+
+```
+const entryHTML = `        
+    <div>
+      <h1>Example, do replace</h1>
+      <p>entry.name</p>
+      <p>entry.description</p>
+    </div>
+                    `;
+//insert your entry html structure inside, the code will generate per entry
+```
