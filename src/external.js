@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
     // List of known JSON file URLs
     const jsonUrls = [
         'https://example.com/data/file1.json',
