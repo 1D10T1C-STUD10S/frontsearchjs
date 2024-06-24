@@ -87,6 +87,15 @@ Remember the `<div class="entries-container></div>` we added earlier?
 Now the code will place entries inside that `<div>` using a template, we need to define that template, in the same `<script>` tag as the one we used to define the `jsonUrls`, add:
 
 ```
+function getEntryHTML(entry) {
+  return `
+    <div>
+      <h2>${entry.name}</h2>
+      <p>${entry.description}</p>
+    </div>
+  `;
+}
+
 const entryHTML = `        
     <div>
       <h1>Example, do replace</h1>
