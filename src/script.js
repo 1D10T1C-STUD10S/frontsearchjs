@@ -20,7 +20,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const entriesContainer = document.querySelector('.entries-container');
         const searchInput = document.querySelector('#search-input');
         const message = document.createElement('p');
-        message.textContent = bMessage || 'Start typing, or enter * to show all entries';
+        if (typeof bMessage === undefined) {
+            let bMessage = 'Start typing, or enter * to show all entries';
+        }
+        message.textContent = bMessage;
         entriesContainer.appendChild(message);
 
         searchInput.addEventListener('input', () => {
@@ -30,7 +33,10 @@ document.addEventListener('DOMContentLoaded', function() {
             if (searchQuery === '') {
                 entriesContainer.innerHTML = '';
                 entriesContainer.appendChild(message);
-            } else if (searchQuery === fsTerm || '*') {
+                if (typeof fsTerm === undefined) {
+                    let fsTerm = '*';
+                }
+            } else if (searchQuery === fsTerm) {
                 filtered = entries;
             } else {
                 filtered = entries.filter(entry => {
@@ -46,7 +52,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (filtered.length === 0) {
                 const noResultsMessage = document.createElement('p');
-                noResultsMessage.textContent = nrMessage || 'results, try a different query';
+                        if (typeof nrMessage === undefined) {
+                            let nrMessage = 'No results, try a different query';
+                        }
+                noResultsMessage.textContent = nrMessage;
                 entriesContainer.appendChild(noResultsMessage);
             } else {
                 filtered.forEach(entry => {
