@@ -2,7 +2,7 @@
   {
     "name": "Example Title 1",
     "image": "https://example.com/image1.jpg",
-    "category": "Alpine",
+    "category": "Cat1",
     "description": "BlahBlah",
     "detail1": "1",
     "detail2": "2"
@@ -10,7 +10,7 @@
   {
     "name": "Example Title 2",
     "image": "https://example.com/image2.jpg",
-    "category": "Alpine",
+    "category": "Cat2",
     "description": "BlahBlah",
     "detail1": "1",
     "detail2": "2"
