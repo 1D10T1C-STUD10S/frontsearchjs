@@ -1,5 +1,6 @@
 
-### FrontSearch.js, the library/template for easy filter search systems!
+<img src="https://frontsearch.js.org/favicon.png" style="float: left;">
+<h3>FrontSearch.js, the library/template for easy filter search systems!</h3>
 
 <div style="background-color: #ffffff !important; border-radius: 10px; padding: 8px !important; text-decoration: none !important; color: #000000 !important;">
 <a href="/try">Try it out!</a>
