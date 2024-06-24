@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (searchQuery === '') {
                 entriesContainer.innerHTML = '';
                 entriesContainer.appendChild(message);
-            } else if (searchQuery === '*') {
+            } else if (searchQuery === fsTerm ?? '*') {
                 filtered = entries;
             } else {
                 filtered = entries.filter(entry => {
