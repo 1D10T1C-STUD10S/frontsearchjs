@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const entriesContainer = document.querySelector('.entries-container');
         const searchInput = document.querySelector('#search-input');
         const message = document.createElement('p');
-        if (typeof bMessage === undefined) {
+        if (typeof bMessage === 'undefined') {
             bMessage = 'Start typing, or enter * to show all entries';
         }
         message.textContent = bMessage;
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
         searchInput.addEventListener('input', () => {
             const searchQuery = searchInput.value.toLowerCase();
             let filtered = [];
-            if (typeof fsTerm === undefined) {
+            if (typeof fsTerm === 'undefined') {
                 fsTerm = '*';
             }
             if (searchQuery === '') {
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (filtered.length === 0) {
                 const noResultsMessage = document.createElement('p');
-                if (typeof nrMessage === undefined) {
+                if (typeof nrMessage === 'undefined') {
                     nrMessage = 'No results, try a different query';
                 }
                 noResultsMessage.textContent = nrMessage;
