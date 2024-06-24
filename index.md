@@ -1,5 +1,5 @@
 
-<img src="https://frontsearch.js.org/favicon.png" style="float: left;">
+<img src="https://frontsearch.js.org/favicon.png" style="float: left; max-height: 50px; max-width: 50px;">
 <h3>FrontSearch.js, the library/template for easy filter search systems!</h3>
 
 <div style="background-color: #ffffff !important; border-radius: 10px; padding: 8px !important; text-decoration: none !important; color: #000000 !important;">
