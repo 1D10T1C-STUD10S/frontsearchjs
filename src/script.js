@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const searchInput = document.querySelector('#search-input');
         const message = document.createElement('p');
         if (typeof bMessage === undefined) {
-            let bMessage = 'Start typing, or enter * to show all entries';
+            bMessage = 'Start typing, or enter * to show all entries';
         }
         message.textContent = bMessage;
         entriesContainer.appendChild(message);
@@ -29,13 +29,12 @@ document.addEventListener('DOMContentLoaded', function() {
         searchInput.addEventListener('input', () => {
             const searchQuery = searchInput.value.toLowerCase();
             let filtered = [];
-
+            if (typeof fsTerm === undefined) {
+                fsTerm = '*';
+            }
             if (searchQuery === '') {
                 entriesContainer.innerHTML = '';
                 entriesContainer.appendChild(message);
-                if (typeof fsTerm === undefined) {
-                    let fsTerm = '*';
-                }
             } else if (searchQuery === fsTerm) {
                 filtered = entries;
             } else {
@@ -52,9 +51,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (filtered.length === 0) {
                 const noResultsMessage = document.createElement('p');
-                        if (typeof nrMessage === undefined) {
-                            let nrMessage = 'No results, try a different query';
-                        }
+                if (typeof nrMessage === undefined) {
+                    nrMessage = 'No results, try a different query';
+                }
                 noResultsMessage.textContent = nrMessage;
                 entriesContainer.appendChild(noResultsMessage);
             } else {
