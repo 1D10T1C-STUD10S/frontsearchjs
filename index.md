@@ -133,22 +133,17 @@ We have **fixed** values so follow the sample template, if you don't want the va
 
 And you're done!, make sure to link the right url values in `jsonUrls`. Do leave a star on our repo so others can easily find this library!
 
-<script>
-const jsonUrls = [
-  'https://frontsearch.js.org/src/sample.json'
-  // Add more URLs as needed
-];
+## Customisation 
 
-const entryHTML = `        
-    <div>
-      <h1>Example</h1>
-      <p>${entry.name}</p>
-      <p>${entry.description}</p>
-      <p>${entry.category}</p>
-    </div>
-                  `;
-//insert your entry html structure inside, the code will generate per entry
-</script>
+### Changing the Default Message
+
+You can customise the message that is shown depending on the circumstance. If left blank defaults to the default message, in the same variable `<script>` tag:
+
+```
+let bMessage = 'insert start message, if not defined, uses default message'
+
+let nrMessage = 'insert no results message, if not defined, shows default message'
+```
 
 <!-- Place this tag in your head or just before your close body tag. For writers, please ignore this tag. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
