@@ -132,19 +132,24 @@ We have **fixed** values so follow the sample template, if you don't want the va
 ]
 ```
 
-And you're done!, make sure to link the right url values in `jsonUrls`. Do leave a star on our repo so others can easily find this library!
+And you're almost done!, make sure to link the right url values in `jsonUrls`. Next up:
 
 ## Customisation 
 
 ### Changing the Default Message
 
-You can customise the message that is shown depending on the circumstance. If left blank defaults to the default message, in the same variable `<script>` tag:
+You can customise the message that is shown depending on the circumstance. In the same variable `<script>` tag:
 
 ```
-let bMessage = 'insert start message, if not defined, uses default message'
+let bMessage = 'insert start message'
 
-let nrMessage = 'insert no results message, if not defined, shows default message'
+let nrMessage = 'insert no results message'
+
+let fsTerm = '*' //the term to use to show all entries
 ```
+And you're done!
+Do leave a star on our repo so others can easily find this library!
 
 <!-- Place this tag in your head or just before your close body tag. For writers, please ignore this tag. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
+
