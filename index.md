@@ -95,14 +95,6 @@ function getEntryHTML(entry) {
     </div>
   `;
 }
-
-const entryHTML = `        
-    <div>
-      <h1>Example, do replace</h1>
-      <p>${entry.name}</p>
-      <p>${entry.description}</p>
-    </div>
-                    `;
 //insert your entry html structure inside, the code will generate per entry
 ```
 
