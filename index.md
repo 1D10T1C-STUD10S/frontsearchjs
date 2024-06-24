@@ -97,6 +97,30 @@ Let's move on to the JSON file(s) now shall we?
 
 We use our own values for the search, but if you want your own, it's not that hard to edit the source code for your own use!
 
+We have **fixed** values so follow the sample template, if you don't want the values simply dont include them in the `entryHTML` variable. Sample file:
+
+```
+[
+  {
+    "name": "Example Title 1",
+    "image": "https://example.com/image1.jpg",
+    "category": "Cat1",
+    "description": "BlahBlah",
+    "detail1": "1",
+    "detail2": "2"
+  },
+  {
+    "name": "Example Title 2",
+    "image": "https://example.com/image2.jpg",
+    "category": "Cat2",
+    "description": "BlahBlah",
+    "detail1": "1",
+    "detail2": "2"
+  }
+]
+```
+
+And you're done!, make sure to link the right url values in `jsonUrls`. Do leave a star on our repo so others can easily find this library!
 
 <!-- Place this tag in your head or just before your close body tag. For writers, please ignore this tag. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
