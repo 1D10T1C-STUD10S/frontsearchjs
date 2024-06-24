@@ -32,7 +32,7 @@ First, put this `<script>` tag at the **end** of your `<body` in HTML.
 You will only need this on the pages that you want the search filter to be in, but if you put it in all pages, that's fine too. (Though it may increase loading speeds!)
 
 ```
-<script src="https://raw.githubusercontent.com/1D10T1C-STUD10S/frontsearchjs/main/src/script.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/1d10t1c-stud10s/frontsearchjs@master/src/script.js"></script>
 ```
 
 This script will be the main script component but you will still need to define variables, but that's for later.
@@ -150,4 +150,4 @@ const entryHTML = `
 <!-- Place this tag in your head or just before your close body tag. For writers, please ignore this tag. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-<script src="https://raw.githubusercontent.com/1D10T1C-STUD10S/frontsearchjs/main/src/script.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/1d10t1c-stud10s/frontsearchjs@master/src/script.js"></script>
