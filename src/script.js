@@ -40,6 +40,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
 
+            console.log(entries);
+            
             entriesContainer.innerHTML = ''; // Clear previous entries
 
             if (filtered.length === 0) {
