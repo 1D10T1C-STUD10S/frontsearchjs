@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const entriesContainer = document.querySelector('.entries-container');
         const searchInput = document.querySelector('#search-input');
         const message = document.createElement('p');
-        message.textContent = bMessage ?? 'Start typing, or enter * to show all entries';
+        message.textContent = bMessage || 'Start typing, or enter * to show all entries';
         entriesContainer.appendChild(message);
 
         searchInput.addEventListener('input', () => {
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (searchQuery === '') {
                 entriesContainer.innerHTML = '';
                 entriesContainer.appendChild(message);
-            } else if (searchQuery === fsTerm ?? '*') {
+            } else if (searchQuery === fsTerm || '*') {
                 filtered = entries;
             } else {
                 filtered = entries.filter(entry => {
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (filtered.length === 0) {
                 const noResultsMessage = document.createElement('p');
-                noResultsMessage.textContent = nrMessage ?? 'results, try a different query';
+                noResultsMessage.textContent = nrMessage || 'results, try a different query';
                 entriesContainer.appendChild(noResultsMessage);
             } else {
                 filtered.forEach(entry => {
