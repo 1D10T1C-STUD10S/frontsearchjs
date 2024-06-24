@@ -1,7 +1,9 @@
 
 ### FrontSearch.js, the library/template for easy filter search systems!
 
-<a style="background-color: #ffffff !important; border-radius: 10px; padding: 8px !important; text-decoration: none !important; color: #000000 !important;" href="/try">Try it out!</a>
+<div style="background-color: #ffffff !important; border-radius: 10px; padding: 8px !important; text-decoration: none !important; color: #000000 !important;">
+<a href="/try">Try it out!</a>
+</div>
 
 <div style="display: block; margin: 0 auto;">
 <a class="github-button" href="https://github.com/1D10T1C-STUD10S/frontsearchjs" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star 1D10T1C-STUD10S/frontsearchjs on GitHub">Star</a>
