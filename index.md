@@ -1,6 +1,13 @@
 
 ### FrontSearch.js, the library/template for easy filter search systems!
 
+
+<!-- Search Bar -->
+<input type="search" id="search-input" placeholder="Search Database">
+
+<!-- Important Part -->
+<div class="entries-container></div>
+
 <div style="display: block; margin: 0 auto;">
 <a class="github-button" href="https://github.com/1D10T1C-STUD10S/frontsearchjs" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star 1D10T1C-STUD10S/frontsearchjs on GitHub">Star</a>
 
@@ -123,5 +130,24 @@ We have **fixed** values so follow the sample template, if you don't want the va
 
 And you're done!, make sure to link the right url values in `jsonUrls`. Do leave a star on our repo so others can easily find this library!
 
+<script>
+const jsonUrls = [
+  'https://frontsearch.js.org/src/sample.json'
+  // Add more URLs as needed
+];
+
+const entryHTML = `        
+    <div>
+      <h1>Example</h1>
+      <p>${entry.name}</p>
+      <p>${entry.description}</p>
+      <p>${entry.category}</p>
+    </div>
+                  `;
+//insert your entry html structure inside, the code will generate per entry
+</script>
+
 <!-- Place this tag in your head or just before your close body tag. For writers, please ignore this tag. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<script src="https://raw.githubusercontent.com/1D10T1C-STUD10S/frontsearchjs/main/src/script.js"></script>
