@@ -150,6 +150,33 @@ let fsTerm = '*' //the term to use to show all entries
 And you're done!
 Do leave a star on our repo so others can easily find this library!
 
+**WARNING: DO NOT miss out any parameters in your variables section as it may result in a `referenceError`,** use the sample below if you're confused:
+
+```
+<script>
+let bMessage = 'Start typing or enter '*' to show all entries'
+
+let nrMessage = 'No results, try a different query'
+
+let fsTerm = '*' 
+  
+const jsonUrls = [
+  'https://frontsearch.js.org/src/sample.json'
+  // Add more URLs as needed
+];
+
+function getEntryHTML(entry) {
+  return `
+    <div>
+      <h2>${entry.name}</h2>
+      <p>${entry.description}</p>
+    </div>
+  `;
+}
+//insert your entry html structure inside, the code will generate per entry
+</script>
+```
+
 <!-- Place this tag in your head or just before your close body tag. For writers, please ignore this tag. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
