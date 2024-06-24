@@ -19,14 +19,14 @@ const jsonUrls = [
   // Add more URLs as needed
 ];
 
-const entryHTML = `        
+function getEntryHTML(entry) {
+  return `
     <div>
-      <h1>Example</h1>
-      <p>${entry.name}</p>
+      <h2>${entry.name}</h2>
       <p>${entry.description}</p>
-      <p>${entry.category}</p>
     </div>
-                  `;
+  `;
+}
 //insert your entry html structure inside, the code will generate per entry
 </script>
 
