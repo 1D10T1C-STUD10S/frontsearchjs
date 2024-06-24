@@ -80,13 +80,14 @@ Now the code will place entries inside that `<div>` using a template, we need to
 const entryHTML = `        
     <div>
       <h1>Example, do replace</h1>
-      <p>entry.name</p>
-      <p>entry.description</p>
+      <p>${entry.name}</p>
+      <p>${entry.description}</p>
     </div>
                     `;
 //insert your entry html structure inside, the code will generate per entry
 ```
 
+We will go through all the useable variables in the next part.
 Let's move on to the JSON file(s) now shall we?
 
 ---
