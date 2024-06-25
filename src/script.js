@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             entriesContainer.innerHTML = ''; // Clear previous entries
 
-            if (filtered.length === 0 && !== '') {
+            if (filtered.length === 0) {
                 const noResultsMessage = document.createElement('p');
                 if (typeof nrMessage === 'undefined') {
                     let nrMessage = 'No results, try a different query';
