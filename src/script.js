@@ -16,7 +16,7 @@ if (typeof entryStructure === 'undefined') {
 function getEntryHTML(entry) {
   return 
     entryStructure
-  ;
+};
 
 document.addEventListener('DOMContentLoaded', function() {
 
