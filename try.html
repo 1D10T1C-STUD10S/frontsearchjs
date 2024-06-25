@@ -20,11 +20,28 @@ var nrMessage = 'no results'
 
 var fsTerm = '*' 
 
-var entryStructure = '\
-<div>\
-<h2>${entry.name}</h2>\
-<p>${entry.description}</p>\
-</div>';
+function getEntryHTML(entry) {
+    console.log(entry);
+    if (typeof entryStructure === 'undefined') {
+        entryStructure = `
+        <div>
+        <h2>${entry.name}</h2>
+        <small><p>${entry.category}</p></small>
+        <p>${entry.description}</p>
+        </div>
+        `;
+    } else {
+        entryStructure = entryStructure.replace("'", ``);
+    }
+    console.log(entryStructure);
+    return entryStructure;
+};
+
+//var entryStructure = '\
+//<div>\
+//<h2>${entry.name}</h2>\
+//<p>${entry.description}</p>\
+//</div>';
   
 const jsonUrls = [
   'https://frontsearch.js.org/src/sample.json'
