@@ -3,7 +3,8 @@
 var bMessage;
 var nrMessage;
 var fsTerm;
-var entryStructure
+var entryStructure;
+var startShowAll = true;
 
 function checkEntryHTML(entry) {
 }
@@ -32,13 +33,17 @@ document.addEventListener('DOMContentLoaded', function() {
         const entriesContainer = document.querySelector('.entries-container');
         const searchInput = document.querySelector('#search-input');
         const message = document.createElement('p');
-        if (typeof bMessage === 'undefined') {
-            bMessage = 'Start typing, or enter * to show all entries';
-            console.log(bMessage);
+        if (typeof startShowAll === 'false') {
+            if (typeof bMessage === 'undefined') {
+                bMessage = 'Start typing, or enter * to show all entries';
+                console.log(bMessage);
+            }
+            message.textContent = bMessage;
+            entriesContainer.appendChild(message);
+        } else {
+            filered = entries;
         }
-        message.textContent = bMessage;
-        entriesContainer.appendChild(message);
-
+        
         searchInput.addEventListener('input', () => {
             const searchQuery = searchInput.value.toLowerCase();
             let filtered = [];
