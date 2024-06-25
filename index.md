@@ -3,8 +3,8 @@ layout: default
 ---
 
 <style>
-  .mark {
-    background: yellow !important;
+  mark {
+    background: #ffea00 !important;
   }
 </style>
 
@@ -47,7 +47,7 @@ You will only need this on the pages that you want the search filter to be in, b
 
 <script src="https://frontsearch.js.org/src/script.js"></script>
 ```
-<mark>Use the second cdn '<script>' tag for now.</mark>
+<mark>Use the second cdn `<script>` tag for now.</mark>
 
 This script will be the main script component but you will still need to define variables, but that's for later.
 
@@ -82,7 +82,7 @@ We have **fixed** values so follow the sample template, if you don't want the va
 ]
 ```
 
-<mark>Eg. `name` will translate to `entry.name` or `${entry.name}` when building your HTML later (description and the other params will follow).</mark
+<mark>Eg. `name` will translate to `entry.name` or `${entry.name}` when building your HTML later (description and the other params will follow).</mark>
 
 And you're almost done!, make sure to link the right url values in `jsonUrls`. Next up:
 
