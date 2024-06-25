@@ -6,15 +6,16 @@ var fsTerm;
 var entryStructure
 
 function checkEntryHTML(entry) {
-if (typeof entryStructure === 'undefined') {
-    entryStructure = `
-      <div>
-      <h2>${entry.name}</h2>
-      <small><p>${entry.category}</p></small>
-      <p>${entry.description}</p>
-      </div>
-      `;
-}
+    console.log(entry);
+    if (typeof entryStructure === 'undefined') {
+        entryStructure = `
+        <div>
+        <h2>${entry.name}</h2>
+        <small><p>${entry.category}</p></small>
+        <p>${entry.description}</p>
+        </div>
+        `;
+    }
 }
     
 function getEntryHTML(entry) {
