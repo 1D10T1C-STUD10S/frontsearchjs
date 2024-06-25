@@ -58,6 +58,13 @@ document.addEventListener('DOMContentLoaded', function() {
             
             entriesContainer.innerHTML = ''; // Clear previous entries
 
+            if (typeof entryHTML === 'undefined') {
+                entryHTML = `
+                      <h3>${entry.name}</h3>
+                      <small><p>${entry.category}</p></small>
+                      <p>${entry.description}</p>
+                      `;
+            }
             if (filtered.length === 0) {
                 const noResultsMessage = document.createElement('p');
                 if (typeof nrMessage === 'undefined') {
@@ -69,15 +76,6 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 filtered.forEach(entry => {
                     const entryElement = document.createElement('div');
-                    if (typeof entryHTML === 'undefined') {
-                        entryHTML = `
-
-                        <h3>${entry.name}</h3>
-                        <small><p>${entry.category}</p></small>
-                        <p>${entry.description}</p>
-
-                        `;
-                    }
                     entryElement.innerHTML = entryHTML;
                     entriesContainer.appendChild(entryElement);
                 });
