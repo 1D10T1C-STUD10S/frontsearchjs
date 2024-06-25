@@ -142,19 +142,19 @@ And you're almost done!, make sure to link the right url values in `jsonUrls`. N
 
 ### Changing the Default Message
 
-You can customise the message that is shown depending on the circumstance. In the same variable `<script>` tag:
+You can customise the message that is shown depending on the circumstance, leave it blank to use the default value. In the same variable `<script>` tag:
 
 ```
-let bMessage = 'insert start message'
+var bMessage = 'insert start message'
 
-let nrMessage = 'insert no results message'
+var nrMessage = 'insert no results message'
 
-let fsTerm = '*' //the term to use to show all entries
+var fsTerm = '*' //the term to use to show all entries
 ```
 And you're done!
 Do leave a star on our repo so others can easily find this library!
 
-**WARNING: DO NOT miss out any parameters in your variables section as it may result in a `referenceError`,** use the sample below if you're confused:
+Ue the sample below if you're confused:
 
 ```
 <script>
