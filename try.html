@@ -34,7 +34,13 @@ function getEntryHTML(entry) {
     //    entryStructure = entryStructure.replace("'", ``);
     //}
     console.log(entryStructure);
-    return entryStructure;
+    return `
+        <div>
+        <h2>${entry.name}</h2>
+        <small><p>${entry.category}</p></small>
+        <p>${entry.description}</p>
+        </div>
+    `;
 };
 
 //var entryStructure = '\
