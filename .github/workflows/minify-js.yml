@@ -14,5 +14,5 @@ jobs:
       - name: Minify JS
         uses: github-actions/minify-js@v1
         with:
-          files: './script.js'
-          output: './script.min.js'
+          files: './src/script.js'
+          output: './src/script.min.js'
