@@ -46,65 +46,6 @@ This script will be the main script component but you will still need to define 
 
 ---
 
-## Building the Search Function
-
-### HTML and CSS
-
-We will not run through the CSS but the HTML is a must. Since we use specific classes abd id(s) to get the elements, do **keep those intact**!
-
-Now, we need to add the basic HTML content:
-
-```
-<!-- Search Bar -->
-<input type="search" id="search-input" placeholder="Search Database">
-
-<!-- Important Part -->
-<div class="entries-container"></div>
-```
-
-Do note the JS will create messages below this HTML.
-
-### Adding Variables
-
-
-This step defines how your search will look, and also where the code will get the JSON files from.
-
-First, create a new `<script>` tag in your HTML, **above** the first one we added:
-
-```
-<script>
-const jsonUrls = [
-  'https://example.com/data/file1.json',
-  'https://example.com/data/file2.json',
-  'https://example.com/data/file3.json',
-  'https://example.com/data/file4.json',
-  'https://example.com/data/file5.json',
-  // Add more URLs as needed
-];
-</script>
-```
-
-Now you're almost there! We will do the JSON in a bit!
-
-Remember the `<div class="entries-container></div>` we added earlier?
-
-Now the code will place entries inside that `<div>` using a template, we need to define that template, in the same `<script>` tag as the one we used to define the `jsonUrls`, add:
-
-```
-var entryHTML = `
-    <div>
-      <h2>${entry.name}</h2>
-      <p>${entry.description}</p>
-    </div>
-  `;
-//insert your entry html structure inside, the code will generate per entry
-```
-
-We will go through all the useable variables in the next part.
-Let's move on to the JSON file(s) now shall we?
-
----
-
 ## Data Storage
 
 ### JSON Structure
@@ -134,7 +75,79 @@ We have **fixed** values so follow the sample template, if you don't want the va
 ]
 ```
 
+Now eg. `name` will translate to `entry.name` or `${entry.name}` when building your HTML later (description and the other params will follow).
 And you're almost done!, make sure to link the right url values in `jsonUrls`. Next up:
+
+---
+
+## Building the Search Function
+
+### HTML and CSS
+
+We will not run through the CSS but the HTML is a must. Since we use specific classes abd id(s) to get the elements, do **keep those intact**!
+
+Now, we need to add the basic HTML content:
+
+```
+<!-- Search Bar -->
+<input type="search" id="search-input" placeholder="Search Database">
+
+<!-- Important Part -->
+<div class="entries-container"></div>
+```
+
+> **<mark>You may add more classes but the main `type`, `id` and `class` *must* stay, this is because our code uses that to select these HTML elements!</mark>**
+
+Do note the JS will create messages below this HTML.
+
+### Adding Variables
+
+
+This step defines how your search will look, and also where the code will get the JSON files from.
+
+First, create a new `<script>` tag in your HTML, **above** the first one we added:
+
+```
+<script>
+const jsonUrls = [
+  'https://example.com/data/file1.json',
+  'https://example.com/data/file2.json',
+  'https://example.com/data/file3.json',
+  'https://example.com/data/file4.json',
+  'https://example.com/data/file5.json',
+  // Add more URLs as needed
+];
+</script>
+```
+
+> **<mark>This is a required step as of now, omitting it will result in referenceError(s)</mark>**
+
+Now you're almost there! We will do the JSON in a bit!
+
+Remember the `<div class="entries-container></div>` we added earlier?
+
+Now the code will place entries inside that `<div>` using a template, we need to define that template, in the same `<script>` tag as the one we used to define the `jsonUrls`, add:
+
+```
+function getEntryHTML(entry)
+    //insert your entry html structure inside, the code will generate per entry
+    return `
+        <div>
+        <h2>${entry.name}</h2>
+        <small><p>${entry.category}</p></small>
+        <p>${entry.description}</p>
+        </div>
+    `;
+};
+```
+
+> **<mark>This is a required step as of now, omitting it will result in referenceError(s)</mark>**
+
+We will go through all the useable variables in the next part.
+Let's move on to the JSON file(s) now shall we?
+
+---
+
 
 ## Customisation 
 
@@ -149,10 +162,17 @@ var nrMessage = 'insert no results message'
 
 var fsTerm = '*' //the term to use to show all entries
 ```
+
+> **<mark>It's fine if you leaves these as blank, they will then follow the default values!</mark>**
+
 And you're done!
 Do leave a star on our repo so others can easily find this library!
 
-Ue the sample below if you're confused:
+---
+
+## Miscellanious
+
+Use the sample below if you're confused:
 
 ```
 <script>
