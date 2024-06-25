@@ -5,6 +5,7 @@ var nrMessage;
 var fsTerm;
 var entryHTML;
 
+
 document.addEventListener('DOMContentLoaded', function() {
 
     async function fetchAndCombineJSON(urls) {
@@ -76,6 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 filtered.forEach(entry => {
                     const entryElement = document.createElement('div');
+                    const entryHTML = getEntryHTML(entry);
                     entryElement.innerHTML = entryHTML;
                     entriesContainer.appendChild(entryElement);
                 });
