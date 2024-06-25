@@ -18,6 +18,8 @@ function getEntryHTML(entry) {
         <p>${entry.description}</p>
         </div>
         `;
+    } else {
+        entryStructure = entryStructure.replace("'", ``);
     }
     return entryStructure;
 };
