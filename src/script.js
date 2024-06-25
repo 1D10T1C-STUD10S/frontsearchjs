@@ -8,22 +8,7 @@ var entryStructure
 function checkEntryHTML(entry) {
 }
     
-function getEntryHTML(entry) {
-    console.log(entry);
-    if (typeof entryStructure === 'undefined') {
-        entryStructure = `
-        <div>
-        <h2>${entry.name}</h2>
-        <small><p>${entry.category}</p></small>
-        <p>${entry.description}</p>
-        </div>
-        `;
-    } else {
-        entryStructure = entryStructure.replace("'", ``);
-    }
-    console.log(entryStructure);
-    return entryStructure;
-};
+
 
 document.addEventListener('DOMContentLoaded', function() {
 
