@@ -91,14 +91,12 @@ Remember the `<div class="entries-container></div>` we added earlier?
 Now the code will place entries inside that `<div>` using a template, we need to define that template, in the same `<script>` tag as the one we used to define the `jsonUrls`, add:
 
 ```
-function getEntryHTML(entry) {
-  return `
+var entryHTML = `
     <div>
       <h2>${entry.name}</h2>
       <p>${entry.description}</p>
     </div>
   `;
-}
 //insert your entry html structure inside, the code will generate per entry
 ```
 
@@ -169,14 +167,12 @@ const jsonUrls = [
   // Add more URLs as needed
 ];
 
-function getEntryHTML(entry) {
-  return `
+var entryHTML = `
     <div>
       <h2>${entry.name}</h2>
       <p>${entry.description}</p>
     </div>
   `;
-}
 //insert your entry html structure inside, the code will generate per entry
 </script>
 ```
