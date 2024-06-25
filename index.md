@@ -47,7 +47,7 @@ You will only need this on the pages that you want the search filter to be in, b
 
 <script src="https://frontsearch.js.org/src/script.js"></script>
 ```
-> **<mark class="mark">Use the second cdn `<script>` tag for now.</mark>**
+> **<mark>Use the second cdn `<script>` tag for now.</mark>**
 
 This script will be the main script component but you will still need to define variables, but that's for later.
 
@@ -82,7 +82,7 @@ We have **fixed** values so follow the sample template, if you don't want the va
 ]
 ```
 
-> **<mark class="mark">>Eg. `name` will translate to `entry.name` or `${entry.name}` when building your HTML later (description and the other params will follow).</mark>**
+> **<mar>>Eg. `name` will translate to `entry.name` or `${entry.name}` when building your HTML later (description and the other params will follow).</mark>**
 
 And you're almost done!, make sure to link the right url values in `jsonUrls`. Next up:
 
@@ -104,7 +104,7 @@ Now, we need to add the basic HTML content:
 <div class="entries-container"></div>
 ```
 
-> **<mark class="mark">>You may add more classes but the main `type`, `id` and `class` *must* stay, this is because our code uses that to select these HTML elements!</mark>**
+> **<mark>You may add more classes but the main `type`, `id` and `class` *must* stay, this is because our code uses that to select these HTML elements!</mark>**
 
 Do note the JS will create messages below this HTML.
 
@@ -128,7 +128,7 @@ const jsonUrls = [
 </script>
 ```
 
-> **<mark class="mark">>This is a required step as of now, omitting it will result in referenceError(s)</mark>**
+> **<mark>This is a required step as of now, omitting it will result in referenceError(s)</mark>**
 
 Now you're almost there! We will do the JSON in a bit!
 
@@ -149,7 +149,7 @@ function getEntryHTML(entry)
 };
 ```
 
-> **<mark class="mark">>This is a required step as of now, omitting it will result in referenceError(s)</mark>**
+> **<mark>This is a required step as of now, omitting it will result in referenceError(s)</mark>**
 
 We will go through all the customisable features in the next part.
 
@@ -170,7 +170,7 @@ var nrMessage = 'insert no results message'
 var fsTerm = '*' //the term to use to show all entries
 ```
 
-> **<mark class="mark">>It's fine if you leave these as blank, they will then follow the default values!</mark>**
+> **<mark>It's fine if you leave these as blank, they will then follow the default values!</mark>**
 
 And you're done!
 Do leave a star on our repo so others can easily find this library!
