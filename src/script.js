@@ -1,3 +1,9 @@
+//variables
+
+var bMessage;
+var nrMessage;
+var fsTerm;
+
 document.addEventListener('DOMContentLoaded', function() {
 
     async function fetchAndCombineJSON(urls) {
