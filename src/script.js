@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const searchInput = document.querySelector('#search-input');
         const message = document.createElement('p');
         if (typeof bMessage === 'undefined') {
-            bMessage = 'Start typing, or enter * to show all entries';
+            let bMessage = 'Start typing, or enter * to show all entries';
         }
         message.textContent = bMessage;
         entriesContainer.appendChild(message);
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const searchQuery = searchInput.value.toLowerCase();
             let filtered = [];
             if (typeof fsTerm === 'undefined') {
-                fsTerm = '*';
+                let fsTerm = '*';
             }
             if (searchQuery === '') {
                 entriesContainer.innerHTML = '';
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (filtered.length === 0) {
                 const noResultsMessage = document.createElement('p');
                 if (typeof nrMessage === 'undefined') {
-                    nrMessage = 'No results, try a different query';
+                    let nrMessage = 'No results, try a different query';
                 }
                 noResultsMessage.textContent = nrMessage;
                 entriesContainer.appendChild(noResultsMessage);
