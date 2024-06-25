@@ -14,5 +14,21 @@
     "description": "BlahBlah",
     "detail1": "1",
     "detail2": "2"
+  },
+  {
+    "name": "Example Title 3",
+    "image": "https://example.com/image3.jpg",
+    "category": "Cat3",
+    "description": "BlahBlah",
+    "detail1": "1",
+    "detail2": "2"
+  },
+  {
+    "name": "Example Title 4",
+    "image": "https://example.com/image4.jpg",
+    "category": "Cat4",
+    "description": "BlahBlah",
+    "detail1": "1",
+    "detail2": "2"
   }
 ]
