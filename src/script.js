@@ -3,6 +3,7 @@
 var bMessage;
 var nrMessage;
 var fsTerm;
+var entryHTML;
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -68,7 +69,15 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 filtered.forEach(entry => {
                     const entryElement = document.createElement('div');
-                    const entryHTML = getEntryHTML(entry);
+                    if (typeof entryHTML === 'undefined') {
+                        entryHTML = `
+
+                        <h1>${entry.name}</h1>
+                        <small><p>${entry.category}</p></small>
+                        <p>${entry.description}</p>
+
+                        `;
+                    }
                     entryElement.innerHTML = entryHTML;
                     entriesContainer.appendChild(entryElement);
                 });
