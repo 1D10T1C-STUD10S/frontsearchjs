@@ -3,8 +3,20 @@
 var bMessage;
 var nrMessage;
 var fsTerm;
-var entryHTML;
+var entryStructure;
 
+if (typeof entryStructure === 'undefined') {
+    entryStructure = '
+        <h2>${entry.name}</h2>
+        <p>${entry.description}</p>
+        ';
+    console.log(entryStructure);
+}
+
+function getEntryHTML(entry) {
+  return 
+    entryStructure
+  ;
 
 document.addEventListener('DOMContentLoaded', function() {
 
