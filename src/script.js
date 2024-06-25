@@ -6,8 +6,8 @@ var fsTerm;
 var entryStructure;
 
 if (typeof entryStructure === 'undefined') {
-    entryStructure = '
-        <h2>${entry.name}</h2>
+    entryStructure = '\
+        <h2>${entry.name}</h2>\
         <p>${entry.description}</p>
         ';
     console.log(entryStructure);
