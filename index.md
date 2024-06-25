@@ -47,6 +47,7 @@ You will only need this on the pages that you want the search filter to be in, b
 
 <script src="https://frontsearch.js.org/src/script.js"></script>
 ```
+> **<mark>Use the second cdn `<script>` tag for now.</mark>**
 
 This script will be the main script component but you will still need to define variables, but that's for later.
 
@@ -56,7 +57,7 @@ This script will be the main script component but you will still need to define 
 
 ### JSON Structure
 
-We use our own values for the search, but if you want your own, it's not that hard to edit the source code for your own use!
+We use our own fixed values for the search (total 6), but if you want your own, it's not that hard to edit the source code for your own use!
 
 We have **fixed** values so follow the sample template, if you don't want the values simply dont include them in the `entryHTML` variable. Sample file:
 
@@ -81,7 +82,8 @@ We have **fixed** values so follow the sample template, if you don't want the va
 ]
 ```
 
-Now eg. `name` will translate to `entry.name` or `${entry.name}` when building your HTML later (description and the other params will follow).
+> **<mark>Eg. `name` will translate to `entry.name` or `${entry.name}` when building your HTML later (description and the other params will follow).</mark>**
+
 And you're almost done!, make sure to link the right url values in `jsonUrls`. Next up:
 
 ---
@@ -168,7 +170,7 @@ var nrMessage = 'insert no results message'
 var fsTerm = '*' //the term to use to show all entries
 ```
 
-> **<mark>It's fine if you leaves these as blank, they will then follow the default values!</mark>**
+> **<mark>It's fine if you leave these as blank, they will then follow the default values!</mark>**
 
 And you're done!
 Do leave a star on our repo so others can easily find this library!
