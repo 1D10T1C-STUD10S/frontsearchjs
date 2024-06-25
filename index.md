@@ -2,6 +2,12 @@
 layout: default
 ---
 
+<style>
+  mark {
+    background: yellow !important;
+  }
+</style>
+
 <img src="https://frontsearch.js.org/favicon.png" style="float: left; max-height: 50px; max-width: 50px;">
 <h1>FrontSearch.js</h1>
 
@@ -143,8 +149,7 @@ function getEntryHTML(entry)
 
 > **<mark>This is a required step as of now, omitting it will result in referenceError(s)</mark>**
 
-We will go through all the useable variables in the next part.
-Let's move on to the JSON file(s) now shall we?
+We will go through all the customisable features in the next part.
 
 ---
 
