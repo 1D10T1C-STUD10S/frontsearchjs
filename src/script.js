@@ -74,14 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log(entries);
             
             entriesContainer.innerHTML = ''; // Clear previous entries
-
-            if (typeof entryHTML === 'undefined') {
-                entryHTML = `
-                      <h3>${entry.name}</h3>
-                      <small><p>${entry.category}</p></small>
-                      <p>${entry.description}</p>
-                      `;
-            }
+            
             if (filtered.length === 0) {
                 const noResultsMessage = document.createElement('p');
                 if (typeof nrMessage === 'undefined') {
