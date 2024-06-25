@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (typeof entryHTML === 'undefined') {
                         entryHTML = `
 
-                        <h1>${entry.name}</h1>
+                        <h3>${entry.name}</h3>
                         <small><p>${entry.category}</p></small>
                         <p>${entry.description}</p>
 
