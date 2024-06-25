@@ -21,6 +21,7 @@ function getEntryHTML(entry) {
     } else {
         entryStructure = entryStructure.replace("'", ``);
     }
+    console.log(entryStructure);
     return entryStructure;
 };
 
