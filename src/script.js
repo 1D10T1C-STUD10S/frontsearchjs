@@ -6,6 +6,9 @@ var fsTerm;
 var entryStructure
 
 function checkEntryHTML(entry) {
+}
+    
+function getEntryHTML(entry) {
     console.log(entry);
     if (typeof entryStructure === 'undefined') {
         entryStructure = `
@@ -16,10 +19,7 @@ function checkEntryHTML(entry) {
         </div>
         `;
     }
-}
-    
-function getEntryHTML(entry) {
-  return entryStructure;
+    return entryStructure;
 };
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 filtered.forEach(entry => {
                     const entryElement = document.createElement('div');
-                    checkEntryHTML(entry);
+                    //checkEntryHTML(entry);
                     const entryHTML = getEntryHTML(entry);
                     entryElement.innerHTML = entryHTML;
                     entriesContainer.appendChild(entryElement);
