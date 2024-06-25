@@ -104,7 +104,7 @@ Now, we need to add the basic HTML content:
 <div class="entries-container"></div>
 ```
 
-<mark class="highlight" style="background-color: #ffea00; color: #000000;">You may add more classes but the main `type`, `id` and `class` *must* stay, this is because our code uses that to select these HTML elements!</mark
+<mark class="highlight" style="background-color: #ffea00; color: #000000;">You may add more classes but the main `type`, `id` and `class` *must* stay, this is because our code uses that to select these HTML elements!</mark>
 
 Do note the JS will create messages below this HTML.
 
