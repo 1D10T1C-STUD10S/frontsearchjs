@@ -36,6 +36,10 @@ You will only need this on the pages that you want the search filter to be in, b
 
 ```
 <script src="https://cdn.jsdelivr.net/gh/1d10t1c-stud10s/frontsearchjs@master/src/script.js"></script>
+
+//OR for a updated cdn,
+
+<script src="https://frontsearch.js.org/src/script.js"></script>
 ```
 
 This script will be the main script component but you will still need to define variables, but that's for later.
