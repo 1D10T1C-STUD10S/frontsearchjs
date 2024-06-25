@@ -47,7 +47,7 @@ You will only need this on the pages that you want the search filter to be in, b
 
 <script src="https://frontsearch.js.org/src/script.js"></script>
 ```
-<mark>Use the second cdn `<script>` tag for now.</mark>
+<mark>Use the second cdn <`script`> tag for now.</mark>
 
 This script will be the main script component but you will still need to define variables, but that's for later.
 
