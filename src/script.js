@@ -5,6 +5,7 @@ var nrMessage;
 var fsTerm;
 var entryStructure
 
+function checkEntryHTML(entry) {
 if (typeof entryStructure === 'undefined') {
     entryStructure = `
       <div>
@@ -14,7 +15,8 @@ if (typeof entryStructure === 'undefined') {
       </div>
       `;
 }
-
+}
+    
 function getEntryHTML(entry) {
   return entryStructure;
 };
@@ -90,6 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 filtered.forEach(entry => {
                     const entryElement = document.createElement('div');
+                    checkEntryHTML(entry);
                     const entryHTML = getEntryHTML(entry);
                     entryElement.innerHTML = entryHTML;
                     entriesContainer.appendChild(entryElement);
