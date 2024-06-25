@@ -3,7 +3,7 @@ layout: default
 ---
 
 <style>
-  mark {
+  highlight {
     background: #ffea00 !important;
   }
 </style>
