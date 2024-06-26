@@ -29,9 +29,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const resultspeed = document.createElement('span');
     resultspeed.textContent = `Total time taken: ${timeTaken} milliseconds`
     resultspeed.style.fontSize = 'smaller'; // or a specific font size, like '12px'
-    const entriesContainer = document.querySelector('.entries-container');
-    entriesContainer.prepend(resultspeed);
-
+    const resultSpeedContainer = document.createElement('div');
+    resultSpeedContainer.id = 'result-speed-container';
+    document.body.appendChild(resultSpeedContainer);
+    resultSpeedContainer.appendChild(resultspeed);
+    
     function displayEntries(entries) {
         const entriesContainer = document.querySelector('.entries-container');
         const searchInput = document.querySelector('#search-input');
