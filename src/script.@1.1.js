@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const resultSpeedContainer = document.createElement('div');
     resultSpeedContainer.id = 'result-speed-container';
     document.body.insertBefore(resultSpeedContainer, entriesContainer);
+    resultSpeedContainer.appendChild(resultspeed);
     
     function displayEntries(entries) {
         const entriesContainer = document.querySelector('.entries-container');
