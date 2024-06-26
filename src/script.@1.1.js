@@ -19,9 +19,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    let start = Date.now();
+    
     fetchAndCombineJSON(jsonUrls).then(combinedData => {
         displayEntries(combinedData);
     });
+
+    let timeTaken = Date.now() - start;
+    console.log("Total time taken : " + timeTaken + " milliseconds");
+    const resultspeed = document.createElement('p');
+    resultspeed.textContent = 'Total time taken : " + timeTaken + " milliseconds'
 
     function displayEntries(entries) {
         const entriesContainer = document.querySelector('.entries-container');
