@@ -26,11 +26,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     let timeTaken = Date.now() - start;
-    console.log("Total time taken : " + timeTaken + " milliseconds");
-    const resultspeed = document.createElement('p');
-    resultspeed.textContent = 'Total time taken: ' + timeTaken + ' milliseconds'
-    document.body.appendChild(resultspeed);
-
+    const resultspeed = document.createElement('span');
+    resultspeed.textContent = `Total time taken: ${timeTaken} milliseconds`
+    resultspeed.style.fontSize = 'smaller'; // or a specific font size, like '12px'
+    const entriesContainer = document.querySelector('.entries-container');
+    entriesContainer.prepend(resultspeed);
     function displayEntries(entries) {
         const entriesContainer = document.querySelector('.entries-container');
         const searchInput = document.querySelector('#search-input');
