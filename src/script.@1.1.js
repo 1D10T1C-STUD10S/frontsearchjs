@@ -25,17 +25,13 @@ document.addEventListener('DOMContentLoaded', function() {
         displayEntries(combinedData);
     });
 
-    let timeTaken = Date.now() - start;
-    const resultspeed = document.createElement('span');
+    const resultspeed = document.createElement('p');
     resultspeed.textContent = `Total time taken: ${timeTaken} milliseconds`
-    resultspeed.style.fontSize = 'smaller'; // or a specific font size, like '12px'
-    const entriesContainer = document.querySelector('.entries-container');
-    entriesContainer.prepend(resultspeed);
-    function displayEntries(entries) {
-        const entriesContainer = document.querySelector('.entries-container');
-        const searchInput = document.querySelector('#search-input');
-        const message = document.createElement('p');
-
+    const topDiv = document.createElement('div');
+    topDiv.style.paddingTop = '5px';
+    topDiv.appendChild(resultspeed);
+    document.body.appendChild(topDiv);
+    
         if (!startShowAll) {
             if (typeof bMessage === 'undefined') {
                 bMessage = 'Start typing, or enter * to show all entries';
