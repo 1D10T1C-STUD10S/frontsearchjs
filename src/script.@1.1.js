@@ -1,4 +1,4 @@
-// variables
+// Variables
 var frs$messageStart;
 var frs$messageNoResult;
 var frs$termShowAll;
@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         displayEntries(combinedData);
     });
 
+    
     function displayEntries(entries) {
         const entriesContainer = document.querySelector('.entries-container');
         const searchInput = document.querySelector('#search-input');
@@ -79,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (filtered.length === 0) {
                 const noResultsMessage = document.createElement('p');
                 if (typeof frs$messageNoResult === 'undefined') {
-                    nrMessage = 'No results, try a different query';
+                    frs$messageNoResult = 'No results, try a different query';
                     console.log(frs$messageNoResult);
                 }
                 noResultsMessage.textContent = frs$messageNoResult;
