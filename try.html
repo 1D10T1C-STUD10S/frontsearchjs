@@ -14,11 +14,13 @@ layout: default
 <div class="entries-container"></div>
 
 <script>
-var bMessage = 'type * to show all entries'
+var frontsearchMessage = 'type * to show all entries'
 
-var nrMessage = 'no results'
+var frontsearchNoResultsMessage = 'no results'
 
-var fsTerm = '*' 
+var frontsearchFilterTerm = '*' 
+
+var frontsearchShowAll = false
 
 function getEntryHTML(entry) {
     console.log(entry);
