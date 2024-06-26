@@ -1,9 +1,9 @@
 // variables
-var bMessage;
-var nrMessage;
-var fsTerm;
-var entryStructure;
-var startShowAll;
+var frontsearchMessage;
+var frontsearchNoResultsMessage;
+var frontsearchFilterTerm;
+var frontsearchEntryStructure;
+var frontsearchStartShowAll;
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -32,18 +32,18 @@ document.addEventListener('DOMContentLoaded', function() {
     topDiv.appendChild(resultspeed);
     document.body.appendChild(topDiv);
     
-        if (!startShowAll) {
-            if (typeof bMessage === 'undefined') {
-                bMessage = 'Start typing, or enter * to show all entries';
-                console.log(bMessage);
+        if (!frontsearchStartShowAll) {
+            if (typeof frontsearchMessage === 'undefined') {
+                frontsearchMessage = 'Start typing, or enter * to show all entries';
+                console.log(frontsearchMessage);
             }
-            message.textContent = bMessage;
+            message.textContent = frontsearchMessage;
             entriesContainer.appendChild(message);
         } else {
             filtered = entries;
         }
 
-        if (startShowAll) {
+        if (frontsearchStartShowAll) {
             entriesContainer.innerHTML = ''; // Clear previous entries
             entries.forEach(entry => {
                 const entryElement = document.createElement('div');
@@ -57,15 +57,15 @@ document.addEventListener('DOMContentLoaded', function() {
             const searchQuery = searchInput.value.toLowerCase();
             let filtered = [];
 
-            if (typeof fsTerm === 'undefined') {
-                fsTerm = '*';
-                console.log(fsTerm);
+            if (typeof frontsearchFilterTerm === 'undefined') {
+                frontsearchFilterTerm = '*';
+                console.log(frontsearchFilterTerm);
             }
 
             if (searchQuery === '') {
                 entriesContainer.innerHTML = '';
                 entriesContainer.appendChild(message);
-            } else if (searchQuery === fsTerm) {
+            } else if (searchQuery === frontsearchFilterTerm) {
                 filtered = entries;
             } else {
                 filtered = entries.filter(entry => {
@@ -79,11 +79,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (filtered.length === 0) {
                 const noResultsMessage = document.createElement('p');
-                if (typeof nrMessage === 'undefined') {
-                    nrMessage = 'No results, try a different query';
-                    console.log(nrMessage);
+                if (typeof frontsearchNoResultsMessage === 'undefined') {
+                    frontsearchNoResultsMessage = 'No results, try a different query';
+                    console.log(frontsearchNoResultsMessage);
                 }
-                noResultsMessage.textContent = nrMessage;
+                noResultsMessage.textContent = frontsearchNoResultsMessage;
                 entriesContainer.appendChild(noResultsMessage);
             } else {
                 filtered.forEach(entry => {
