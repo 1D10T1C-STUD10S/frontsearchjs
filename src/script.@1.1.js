@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let timeTaken = Date.now() - start;
     console.log("Total time taken : " + timeTaken + " milliseconds");
     const resultspeed = document.createElement('p');
-    resultspeed.textContent = 'Total time taken : " + timeTaken + " milliseconds'
+    resultspeed.textContent = 'Total time taken: ' + timeTaken + ' milliseconds'
 
     function displayEntries(entries) {
         const entriesContainer = document.querySelector('.entries-container');
