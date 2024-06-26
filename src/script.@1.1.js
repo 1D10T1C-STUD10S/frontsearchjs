@@ -1,9 +1,10 @@
-// Variables
-var frs$messageStart;
-var frs$messageNoResult;
-var frs$termShowAll;
-var frs$startShowAll;
-var frs$dataset;
+// variables
+var bMessage;
+var nrMessage;
+var fsTerm;
+var entryStructure;
+var startShowAll;
+
 
 document.addEventListener('DOMContentLoaded', function() {
     async function fetchAndCombineJSON(urls) {
@@ -18,32 +19,27 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    fetchAndCombineJSON(frs$dataset).then(combinedData => {
+    fetchAndCombineJSON(jsonUrls).then(combinedData => {
         displayEntries(combinedData);
     });
 
-    
     function displayEntries(entries) {
         const entriesContainer = document.querySelector('.entries-container');
         const searchInput = document.querySelector('#search-input');
         const message = document.createElement('p');
 
-        if (typeof frs$startShowAll === 'undefined') {
-            frs$startShowAll = false;
-        }
-
-        if (!frs$startShowAll) {
-            if (typeof frs$messageStart === 'undefined') {
-                frs$messageStart = 'Start typing, or enter * to show all entries';
-                console.log(frs$messageStart);
+        if (!startShowAll) {
+            if (typeof bMessage === 'undefined') {
+                bMessage = 'Start typing, or enter * to show all entries';
+                console.log(bMessage);
             }
-            message.textContent = frs$messageStart;
+            message.textContent = bMessage;
             entriesContainer.appendChild(message);
         } else {
             filtered = entries;
         }
 
-        if (frs$startShowAll) {
+        if (startShowAll) {
             entriesContainer.innerHTML = ''; // Clear previous entries
             entries.forEach(entry => {
                 const entryElement = document.createElement('div');
@@ -57,15 +53,15 @@ document.addEventListener('DOMContentLoaded', function() {
             const searchQuery = searchInput.value.toLowerCase();
             let filtered = [];
 
-            if (typeof frs$termShowAll === 'undefined') {
-                frs$termShowAll = '*';
-                console.log(frs$termShowAll);
+            if (typeof fsTerm === 'undefined') {
+                fsTerm = '*';
+                console.log(fsTerm);
             }
 
             if (searchQuery === '') {
                 entriesContainer.innerHTML = '';
                 entriesContainer.appendChild(message);
-            } else if (searchQuery === frs$termShowAll) {
+            } else if (searchQuery === fsTerm) {
                 filtered = entries;
             } else {
                 filtered = entries.filter(entry => {
@@ -79,11 +75,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (filtered.length === 0) {
                 const noResultsMessage = document.createElement('p');
-                if (typeof frs$messageNoResult === 'undefined') {
-                    frs$messageNoResult = 'No results, try a different query';
-                    console.log(frs$messageNoResult);
+                if (typeof nrMessage === 'undefined') {
+                    nrMessage = 'No results, try a different query';
+                    console.log(nrMessage);
                 }
-                noResultsMessage.textContent = frs$messageNoResult;
+                noResultsMessage.textContent = nrMessage;
                 entriesContainer.appendChild(noResultsMessage);
             } else {
                 filtered.forEach(entry => {
