@@ -1,9 +1,9 @@
 // variables
-var bMessage;
-var nrMessage;
-var fsTerm;
-var entryStructure;
-var startShowAll = true;
+var frs$messageStart;
+var frs$messageNoResult;
+var frs$termShowAll;
+var frs$startShowAll;
+var frs$dataset;
 
 document.addEventListener('DOMContentLoaded', function() {
     async function fetchAndCombineJSON(urls) {
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    fetchAndCombineJSON(jsonUrls).then(combinedData => {
+    fetchAndCombineJSON(frs$dataset).then(combinedData => {
         displayEntries(combinedData);
     });
 
@@ -27,18 +27,22 @@ document.addEventListener('DOMContentLoaded', function() {
         const searchInput = document.querySelector('#search-input');
         const message = document.createElement('p');
 
-        if (!startShowAll) {
-            if (typeof bMessage === 'undefined') {
-                bMessage = 'Start typing, or enter * to show all entries';
-                console.log(bMessage);
+        if (typeof frs$startShowAll === 'undefined') {
+            frs$startShowAll = false;
+        }
+
+        if (!frs$startShowAll) {
+            if (typeof frs$messageStart === 'undefined') {
+                frs$messageStart = 'Start typing, or enter * to show all entries';
+                console.log(frs$messageStart);
             }
-            message.textContent = bMessage;
+            message.textContent = frs$messageStart;
             entriesContainer.appendChild(message);
         } else {
             filtered = entries;
         }
 
-        if (startShowAll) {
+        if (frs$startShowAll) {
             entriesContainer.innerHTML = ''; // Clear previous entries
             entries.forEach(entry => {
                 const entryElement = document.createElement('div');
@@ -52,15 +56,15 @@ document.addEventListener('DOMContentLoaded', function() {
             const searchQuery = searchInput.value.toLowerCase();
             let filtered = [];
 
-            if (typeof fsTerm === 'undefined') {
-                fsTerm = '*';
-                console.log(fsTerm);
+            if (typeof frs$termShowAll === 'undefined') {
+                frs$termShowAll = '*';
+                console.log(frs$termShowAll);
             }
 
             if (searchQuery === '') {
                 entriesContainer.innerHTML = '';
                 entriesContainer.appendChild(message);
-            } else if (searchQuery === fsTerm) {
+            } else if (searchQuery === frs$termShowAll) {
                 filtered = entries;
             } else {
                 filtered = entries.filter(entry => {
@@ -74,11 +78,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (filtered.length === 0) {
                 const noResultsMessage = document.createElement('p');
-                if (typeof nrMessage === 'undefined') {
+                if (typeof frs$messageNoResult === 'undefined') {
                     nrMessage = 'No results, try a different query';
-                    console.log(nrMessage);
+                    console.log(frs$messageNoResult);
                 }
-                noResultsMessage.textContent = nrMessage;
+                noResultsMessage.textContent = frs$messageNoResult;
                 entriesContainer.appendChild(noResultsMessage);
             } else {
                 filtered.forEach(entry => {
