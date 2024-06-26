@@ -25,12 +25,12 @@ document.addEventListener('DOMContentLoaded', function() {
         displayEntries(combinedData);
     });
 
-    const resultspeed = document.createElement('p');
+    let timeTaken = Date.now() - start;
+    const resultspeed = document.createElement('span');
     resultspeed.textContent = `Total time taken: ${timeTaken} milliseconds`
-    const topDiv = document.createElement('div');
-    topDiv.style.paddingTop = '5px';
-    topDiv.appendChild(resultspeed);
-    document.body.appendChild(topDiv);
+    resultspeed.style.fontSize = 'smaller'; // or a specific font size, like '12px'
+    const entriesContainer = document.querySelector('.entries-container');
+    entriesContainer.prepend(resultspeed);
     
         if (!startShowAll) {
             if (typeof bMessage === 'undefined') {
