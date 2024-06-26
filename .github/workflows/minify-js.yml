@@ -1,18 +1,14 @@
-name: Minify JS
+name: Minify JavaScript
 
-on:
-  push:
-    branches:
-      - main
+on: [push]
 
 jobs:
   minify:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
-      - name: Minify JS
-        uses: uglify-js/minify@v1
-        with:
-          files: './src/script.js'
-          output: './src/script.min.js'
+        uses: actions/checkout@v2
+      - name: Minify JavaScript
+        run: |
+          npm install --global terser
+          terser src/file_name.js --output src/file_name.min.js
