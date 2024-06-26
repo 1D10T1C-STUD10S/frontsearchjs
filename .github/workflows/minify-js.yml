@@ -6,9 +6,6 @@ jobs:
   minify:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Minify JavaScript
-        run: |
-          npm install --global terser
-          terser src/file_name.js --output src/file_name.min.js
+       - name: Minify Action
+       - uses: anthonyftwang/minify-action@v1.0.1
+          
