@@ -33,16 +33,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const entriesContainer = document.querySelector('.entries-container');
         const searchInput = document.querySelector('#search-input');
         const message = document.createElement('p');
-        if (typeof startShowAll === 'false') {
-            if (typeof bMessage === 'undefined') {
-                bMessage = 'Start typing, or enter * to show all entries';
-                console.log(bMessage);
-            }
-            message.textContent = bMessage;
-            entriesContainer.appendChild(message);
-        } else {
-            filered = entries;
+        if (typeof bMessage === 'undefined') {            
+            bMessage = 'Start typing, or enter * to show all entries';
+            console.log(bMessage);
         }
+        message.textContent = bMessage;
+        entriesContainer.appendChild(message);
         
         searchInput.addEventListener('input', () => {
             const searchQuery = searchInput.value.toLowerCase();
