@@ -31,7 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
     resultspeed.style.fontSize = 'smaller'; // or a specific font size, like '12px'
     const entriesContainer = document.querySelector('.entries-container');
     entriesContainer.prepend(resultspeed);
-    
+
+    function displayEntries(entries) {
+        const entriesContainer = document.querySelector('.entries-container');
+        const searchInput = document.querySelector('#search-input');
+        const message = document.createElement('p');
         if (!startShowAll) {
             if (typeof bMessage === 'undefined') {
                 bMessage = 'Start typing, or enter * to show all entries';
