@@ -26,13 +26,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     let timeTaken = Date.now() - start;
+    
     const resultspeed = document.createElement('span');
     resultspeed.textContent = `Total time taken: ${timeTaken} milliseconds`
     resultspeed.style.fontSize = 'smaller'; // or a specific font size, like '12px'
+
+    const entriesContainer = document.querySelector('.entries-container');
     const resultSpeedContainer = document.createElement('div');
     resultSpeedContainer.id = 'result-speed-container';
-    document.body.appendChild(resultSpeedContainer);
-    resultSpeedContainer.appendChild(resultspeed);
+    document.body.insertBefore(resultSpeedContainer, entriesContainer);
     
     function displayEntries(entries) {
         const entriesContainer = document.querySelector('.entries-container');
