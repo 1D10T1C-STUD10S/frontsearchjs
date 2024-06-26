@@ -14,16 +14,26 @@ layout: default
 <div class="entries-container"></div>
 
 <script>
-var frs$messageStart = 'start typing or key in * for all entries';
-var frs$messageNoResult = 'no results';
-var frs$termShowAll = '*';
-var frs$startShowAll false;
-const frs$dataset = [
-    'https://frontsearch.js.org/src/sample.json'
-  // Add more URLs as needed
-];
+var bMessage = 'type * to show all entries'
+
+var nrMessage = 'no results'
+
+var fsTerm = '*' 
 
 function getEntryHTML(entry) {
+    console.log(entry);
+    //if (typeof entryStructure === 'undefined') {
+    //    entryStructure = `
+    //    <div>
+    //    <h2>${entry.name}</h2>
+    //    <small><p>${entry.category}</p></small>
+    //    <p>${entry.description}</p>
+    //    </div>
+    //    `;
+    //} else {
+    //    entryStructure = entryStructure.replace("'", ``);
+    //}
+    //console.log(entryStructure);
     return `
         <div>
         <h2>${entry.name}</h2>
@@ -32,6 +42,17 @@ function getEntryHTML(entry) {
         </div>
     `;
 };
+
+//var entryStructure = '\
+//<div>\
+//<h2>${entry.name}</h2>\
+//<p>${entry.description}</p>\
+//</div>';
+  
+const jsonUrls = [
+  'https://frontsearch.js.org/src/sample.json'
+  // Add more URLs as needed
+];
 </script>
 
 <!-- Place this tag in your head or just before your close body tag. For writers, please ignore this tag. -->
