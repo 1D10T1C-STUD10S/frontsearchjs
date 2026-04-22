@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const resultspeed = document.createElement('span');
     resultspeed.textContent = `Total time taken: ${timeTaken} milliseconds`
-    resultspeed.style.fontSize = 'smaller'; // or a specific font size, like '12px'
+    resultspeed.style.fontSize = 'smaller';
 
     const entriesContainer = document.querySelector('.entries-container');
     const resultSpeedContainer = document.createElement('div');
